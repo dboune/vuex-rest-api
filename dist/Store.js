@@ -35,7 +35,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var cloneDeep = require("lodash.clonedeep");
+var lodash_1 = require("lodash");
 var StoreCreator = /** @class */ (function () {
     function StoreCreator(resource, options) {
         this.successSuffix = "SUCCEEDED";
@@ -55,7 +55,7 @@ var StoreCreator = /** @class */ (function () {
         }
     };
     StoreCreator.prototype.createStateObject = function () {
-        var resourceState = cloneDeep(this.resource.state);
+        var resourceState = lodash_1.cloneDeep(this.resource.state);
         var state = Object.assign({
             pending: {},
             error: {}
@@ -79,7 +79,7 @@ var StoreCreator = /** @class */ (function () {
     StoreCreator.prototype.createStateFn = function () {
         var _this = this;
         return function () {
-            var resourceState = cloneDeep(_this.resource.state);
+            var resourceState = lodash_1.cloneDeep(_this.resource.state);
             var state = Object.assign({
                 pending: {},
                 error: {}

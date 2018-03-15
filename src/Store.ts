@@ -1,5 +1,5 @@
 import Resource, { ResourceActionMap } from "./Resource"
-import * as cloneDeep from "lodash.clonedeep"
+import { cloneDeep } from "lodash"
 
 export interface Store {
   state: Object
